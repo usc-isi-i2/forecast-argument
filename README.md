@@ -25,7 +25,7 @@ python3 train_dpr.py --train_dataset_path="path1/" "path2/" "path3/" \
 2. Running the custom augmentation training
 
 ```bash
-python3 train_dpr.py --train_dataset_path="path1/" "path2/" "path3/" \
+python3 train_dual_encoder.py --train_dataset_path="path1/" "path2/" "path3/" \
                                         --val_dataset_path="path1/" "path2/" "path3/" \
                                         --test_dataset_path="path1/" "path2/" "path3/" \
                                         --test_ibm_dataset_path="path/" \
