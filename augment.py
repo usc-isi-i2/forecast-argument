@@ -85,7 +85,10 @@ if __name__=="__main__":
                 cogency, effectiveness, reasonableness, text, title = row
                 
                 if index == 0:
-                    csv_writer.writerow([cogency, effectiveness, reasonableness, text, title, "Feedback", "Assumption", "Counter", "Similar"])
+                    if args.add_similar:
+                        csv_writer.writerow([cogency, effectiveness, reasonableness, text, title, "feedback", "assumption", "counter", "similar"])
+                    else:
+                        csv_writer.writerow([cogency, effectiveness, reasonableness, text, title, "feedback", "assumption", "counter"])
                 else:
                     feedback = sample_feedback(title, text)
                     assumption = sample_assumptions(title, text)
