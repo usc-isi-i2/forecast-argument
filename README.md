@@ -36,3 +36,11 @@ python3 train_dual_encoder.py --train_dataset_path="path1/" "path2/" "path3/" \
                                         --learning_rate=5e-5 \
                                         --epochs=5
 ```
+
+3. Augmenting the dataset
+The augmenting script, `augment.py` requires three input arguments: the input csv file, the output directory and an optional boolean argument which determines if a similar quality argument is to be sampled or not. Sampling a similar quality argument requires labels so this must not be used for testing splits.
+```bash
+python3 augment.py --input_file="path/to/csv" \
+                    --output_dir="path/to/output_dir" \
+                    --add_similar
+```
