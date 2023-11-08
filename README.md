@@ -23,6 +23,7 @@ python3 pyserini_augment.py --dataset_path="path/to/csv" \
                     --out_path="path/to/output_csv" \
                     --col_name="title"
 ```
+Similarly, the `llama_augment.py` and `flan_t5_augment.py` scripts can be run by passing the input_file and output_dir to create those augmented datasets
 
 2. Running the DPR training
 
