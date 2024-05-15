@@ -1,7 +1,11 @@
-# Argument Quality Analysis
+# Contextualizing Argument Quality Assessment with Relevant Knowledge
+This repository contains the data and additional materials for the paper **"Contextualizing Argument Quality Assessment with Relevant Knowledge"** accepted at the NAACL 2024 conference.
+
+## Overview
+In this paper, we present a novel framework, SPARK, for assessing the quality of arguments by contextualizing them with relevant external knowledge. SPARK automatically produces four types of knowledge: feedback, assumptions, counter-arguments, and similar quality arguments to help improve the performance of existing argument quality ranking models. SPARK beats all baselines both in-domain on the GAQCorpus and out-of-domain on IBM-Rank-30K.
 
 ## Install requirements
-To install all necessary requirements, run the following script:
+To install all requirements, run the following script:
 
 ```bash
 pip install -r requirements.txt
@@ -10,7 +14,7 @@ pip install -r requirements.txt
 ## Reproducing results
 
 1. Augmenting the dataset
-The augmenting script, `augment.py` requires three input arguments: the input csv file, the output directory and an optional boolean argument which determines if a similar quality argument is to be sampled or not. Sampling a similar quality argument requires labels so this must not be used for testing splits.
+The augmenting script, `augment.py` requires three input arguments: the input csv file, the output directory and an optional boolean argument which determines if a similar quality argument is to be sampled. Sampling a similar quality argument requires labels so this must not be used for testing splits.
 ```bash
 python3 augment.py --input_file="path/to/csv" \
                     --output_dir="path/to/output_dir" \
@@ -55,3 +59,17 @@ python3 train_dual_encoder.py --train_dataset_path="path1/" "path2/" "path3/" \
 ```
 
 The test set evaluation results will be displayed after the training is complete.
+
+## Citation
+If you use the data or any materials from this repository, please cite our paper:
+```bibtex
+@misc{deshpande2023contextualizing,
+      title={Contextualizing Argument Quality Assessment with Relevant Knowledge},
+      author={Darshan Deshpande and Zhivar Sourati and Filip Ilievski and Fred Morstatter},
+      year={2023},
+      eprint={2305.12280},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+For any questions or issues, please contact Darshan Deshpande at darshang@isi.edu.
